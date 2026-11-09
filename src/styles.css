@@ -185,7 +185,6 @@
   .main-nav a:hover, .quiet-link:hover { color: var(--color-primary); }
   .nav-social, .quiet-link { display: inline-flex; align-items: center; gap: 0.35rem; }
   .nav-social svg, .quiet-link svg { width: 0.92rem; height: 0.92rem; }
-  .mobile-menu-button { display: none; }
 
   .hero-section { display: grid; grid-template-columns: 0.94fr 1.06fr; align-items: center; gap: clamp(2.5rem, 6vw, 6.5rem); padding-block: clamp(3.5rem, 7vw, 6.75rem) clamp(4rem, 8vw, 7.2rem); }
   .hero-copy { padding-block: 1rem; }
@@ -225,9 +224,6 @@
   .occasion-image-link img { display: block; width: 100%; aspect-ratio: 1.13; object-fit: cover; transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1); }
   .occasion-item-2 .occasion-image-link img { aspect-ratio: 1.04; }
   .occasion-image-link:hover img { transform: scale(1.045); }
-  .image-arrow { position: absolute; right: 0.7rem; bottom: 0.7rem; display: grid; width: 2.5rem; aspect-ratio: 1; place-items: center; background: var(--color-background); color: var(--color-foreground); transition: color 180ms ease, background 180ms ease; }
-  .occasion-image-link:hover .image-arrow { background: var(--color-primary); color: var(--color-primary-foreground); }
-  .image-arrow svg { width: 1rem; }
   .occasion-meta { display: flex; justify-content: space-between; gap: 0.5rem; margin-top: 1.1rem; color: var(--color-muted-foreground); font-size: 0.62rem; }
   .occasion-meta span:first-child { color: var(--color-primary); font-weight: 700; }
   .occasion-item h3 { margin: 0.55rem 0 0.45rem; font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; }
@@ -289,7 +285,6 @@
   .page-width { width: min(100% - 2rem, 34rem); }
   .site-header-inner { min-height: 4.6rem; }
   .brand-logo { width: 4.8rem; height: 4.45rem; }
-  .mobile-menu-button { display: inline-flex; }
   .main-nav { position: absolute; top: 100%; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; border-bottom: 1px solid var(--color-border); background: var(--color-background); padding: 0.5rem 1rem 1rem; }
   .main-nav.is-open { display: flex; animation: nav-in 180ms ease both; }
   .main-nav a { padding: 0.85rem 0; }
@@ -335,3 +330,9 @@
 }
 
 @keyframes nav-in { from { opacity: 0; transform: translateY(-0.3rem); } to { opacity: 1; transform: translateY(0); } }
+
+.mobile-menu-button { display: none; }
+
+@media (max-width: 680px) {
+  .mobile-menu-button { display: inline-flex; }
+}

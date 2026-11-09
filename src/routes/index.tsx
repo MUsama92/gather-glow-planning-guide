@@ -149,9 +149,9 @@ function Index() {
             ideas, inspiration, and practical tips for every detail in between.
           </p>
           <div className="hero-actions">
-            <Button asChild className="action-button">
-              <a href="#services">Explore the guide <ArrowDown aria-hidden="true" /></a>
-            </Button>
+          <Button asChild className="action-button">
+            <a href="#services">Explore the guide <ArrowDown aria-hidden="true" /></a>
+          </Button>
             <a className="quiet-link" href={linkedInUrl} target="_blank" rel="noreferrer">
               Meet us on LinkedIn <ArrowUpRight aria-hidden="true" />
             </a>
@@ -197,11 +197,10 @@ function Index() {
           <div className="occasion-grid">
             {occasions.map((occasion, index) => (
               <article className={`occasion-item reveal occasion-item-${index + 1}`} key={occasion.id}>
-                <a className="occasion-image-link" href={linkedInUrl} target="_blank" rel="noreferrer" aria-label={`Explore ${occasion.title} on LinkedIn`}>
+                <div className="occasion-image-link" aria-hidden="true">
                   <img src={occasion.image} alt={occasion.alt} width={1408} height={1008} loading="lazy" />
-                  <span className="image-arrow"><ArrowUpRight aria-hidden="true" /></span>
-                </a>
-                <div className="occasion-meta"><span>{occasion.number}</span><span>Explore the possibilities</span></div>
+                </div>
+                <div className="occasion-meta"><span>{occasion.number}</span><span>Planning inspiration</span></div>
                 <h3>{occasion.title}</h3>
                 <p>{occasion.description}</p>
               </article>
